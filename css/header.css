@@ -1,0 +1,240 @@
+header {
+    background: #da3539;
+    width: 100%;
+    height: 178px;
+    display: block;
+}
+
+@media screen and (min-width: 525px) {
+    header {
+        height: 125px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 160px;
+        position: fixed;
+        z-index: 10;
+    }
+}
+
+header div.top {
+    background: #c72e31;
+    float: right;
+    width: 100%;
+}
+
+header div.top nav a {
+    float: left;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+header div.top nav a:hover,
+header div.top nav a.selected {
+    background: #fff;
+    color: #c72e31;
+}
+
+header div.top div.container div.left {
+    float: left;
+    width: 100px;
+}
+
+header div.top div.container div.left nav {
+    float: left;
+}
+
+header div.top div.container div.left nav a {
+    float: left;
+}
+
+header div.top div.container div.right {
+    float: right;
+    width: calc(100% - 100px);
+}
+
+header div.top div.container div.right nav {
+    float: right;
+}
+
+header div.top div.container div.right nav a {
+    margin-left: 10px;
+}
+
+header div.middle {
+    float: left;
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+
+header div.middle div.logo {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+@media screen and (min-width: 525px) {
+    header div.middle div.logo {
+        clear: none;
+        width: auto;
+    }
+}
+
+header div.middle div.logo a {
+    background: url("../images/logo.svg") center center no-repeat;
+    background-size: 200px auto;
+    width: 200px;
+    height: 40px;
+    display: block;
+    opacity: 0.9;
+}
+
+header div.middle div.logo a:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 375px) {
+    header div.middle div.logo a {
+        background-size: 250px auto;
+        width: 250px;
+    }
+}
+
+header div.middle div.new-ad {
+    float: left;
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 525px) {
+    header div.middle div.new-ad {
+        float: right;
+        margin: 0 55px 0 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header div.middle div.new-ad {
+        margin: 0;
+    }
+}
+
+header div.middle div.new-ad a {
+    background: transparent;
+    float: left;
+    border: 2px solid #fff;
+    padding: 5px 15px 5px 35px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    display: block;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    header div.middle div.new-ad a {
+        float: right;
+    }
+}
+
+header div.middle div.new-ad a:hover {
+    background: #fff;
+    color: #da3539;
+}
+
+header div.middle div.new-ad a::before {
+    content: "+";
+    font-size: 30px;
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+
+header div.bottom {
+    float: left;
+    width: 100%;
+}
+
+header div.bottom div.container {
+    padding: 0;
+}
+
+header div.bottom nav.main-menu {
+    float: left;
+    width: 100%;
+    background: #FBF9F9;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(25px);
+    position: relative;
+    z-index: 10;
+    height: 0;
+    transition: height 150ms ease-in;
+}
+
+header div.bottom nav.main-menu.open {
+    height: 186px;
+    transition: height 150ms ease-out;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    header div.bottom nav.main-menu,
+    header div.bottom nav.main-menu.open {
+        height: auto;
+        margin: 0;
+    }
+}
+
+header div.bottom nav.main-menu ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header div.bottom nav.main-menu ul li {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    header div.bottom nav.main-menu ul li {
+        width: auto;
+    }
+}
+
+header div.bottom nav.main-menu ul li a {
+    float: left;
+    padding: 19px 0;
+    margin: 0 20px;
+    color: #000;
+    position: relative;
+}
+
+header div.bottom nav.main-menu ul li a:hover,
+header div.bottom nav.main-menu ul li a.selected {
+    color: #da3539;
+}
+
+header div.bottom nav.main-menu ul li a span.line {
+    background: #da3539;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 50%;
+    bottom: 13px;
+    transform: translateX(-50%);
+    transition: width 150ms ease-in;
+}
+
+header div.bottom nav.main-menu ul li a:hover span.line,
+header div.bottom nav.main-menu ul li a.selected span.line {
+    width: 100%;
+}

@@ -1,0 +1,92 @@
+.formblock {
+    float: left;
+    width: 100%;
+}
+
+.formblock .row {
+    float: left;
+    width: 100%;
+}
+
+.formblock .row .col1,
+.formblock .row .col2 {
+    float: left;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .formblock .row .col2 {
+        width: 50%;
+    }
+
+    .formblock .row .col2:first-child {
+        padding-right: 7px;
+    }
+
+    .formblock .row .col2:last-child {
+        padding-left: 7px;
+    }
+}
+
+.formblock fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #FBF9F9;
+    padding: 10px;
+    padding-block-start: 15px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+    padding-block-end: 15px;
+}
+
+.formblock fieldset legend {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    font-size: 20px;
+}
+
+.formblock .row label,
+.formblock .row input,
+.formblock .row select,
+.formblock .row textarea {
+    float: left;
+    width: 100%;
+}
+
+.formblock .row input,
+.formblock .row select,
+.formblock .row textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: "Ubuntu", sans-serif;
+    color: #000;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    font-weight: 300;
+}
+
+.formblock .row input:focus,
+.formblock .row select:focus,
+.formblock .row textarea:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.formblock .row button {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 10px 24px 11px;
+    background: #DF3539;
+    color: #FFF;
+    border-radius: 0;
+    box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.2) inset;
+    margin: 30px 0 0 4px;
+    cursor: pointer;
+}
+.formblock .row button:hover {
+    background: #2d2d2d;
+}

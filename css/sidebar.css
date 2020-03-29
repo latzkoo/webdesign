@@ -1,0 +1,71 @@
+aside {
+    float: right;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+        width: 250px;
+    }
+}
+@media screen and (min-width: 992px) {
+    aside {
+        width: 340px;
+    }
+}
+
+aside .box {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding: 15px;
+}
+
+aside .box.bg-gray {
+    background: #FBF9F9;
+}
+
+aside .box .aside-title {
+    float: left;
+    width: 100%;
+    border-bottom: 3px solid #e2e2e2;
+    padding: 5px 0 10px 0;
+}
+aside .box .aside-title h2 {
+    font-family: "Exo", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+aside .box .categories {
+    float: left;
+    width: 100%;
+}
+
+aside .box .categories ul {
+    width: 100%;
+    margin-top: 15px;
+}
+
+aside .box .categories ul li {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #e0dede;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+aside .box .categories ul li:first-child {
+    border: none;
+}
+
+aside .box .categories ul li a {
+    float: left;
+    color: #da3539;
+}
+
+aside .box .categories ul li a:hover {
+    color: #000;
+}

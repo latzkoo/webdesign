@@ -1,0 +1,6 @@
+.tr-color {
+    transition: color 150ms ease-in;
+}
+.tr-all {
+    transition: all 150ms ease-in;
+}

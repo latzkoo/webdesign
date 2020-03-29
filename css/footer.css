@@ -1,0 +1,77 @@
+footer {
+    width: 100%;
+    background: #2f2f2f;
+    height: 1px;
+    display: table-footer-group;
+    position: relative;
+}
+
+footer div.container {
+    display: table;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer div.left {
+    float: left;
+    width: 100%;
+    color: #888888;
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    footer div.left {
+        width: 50%;
+        text-align: left;
+    }
+}
+footer div.left span.clear {
+    display: block;
+}
+@media screen and (min-width: 768px) {
+    footer div.left span.clear {
+        display: inline;
+    }
+}
+
+footer div.right {
+    float: right;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+    footer div.right {
+        width: 50%;
+        text-align: right;
+        margin-bottom: 0;
+    }
+}
+footer div.right nav a {
+    color: #fff;
+}
+footer div.right nav a:hover {
+    color: #da3539;
+}
+
+footer .back-to-top {
+    background: url("../images/arrow-top.svg") center center no-repeat;
+    background-color: rgba(218, 53, 57, 0.8);
+    background-size: 24px auto;
+    cursor: pointer;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 999;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    footer .back-to-top {
+        right: 30px;
+        bottom: 30px;
+    }
+}
