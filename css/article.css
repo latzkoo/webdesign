@@ -1,0 +1,30 @@
+article {
+    width: 100%;
+    margin: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+    article {
+        margin: 45px 0;
+    }
+}
+
+article {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+article p {
+    margin: 25px 0;
+}
+
+article a {
+    color: #da3539;
+}
+article a:hover {
+    text-decoration: underline;
+}
+
+article > div.map {
+    filter: grayscale(100%);
+}

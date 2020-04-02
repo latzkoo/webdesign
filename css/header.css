@@ -25,7 +25,8 @@ header div.top {
     width: 100%;
 }
 
-header div.top nav a {
+header div.top nav a,
+header div.top nav span {
     float: left;
     color: #fff;
     padding: 3px 10px;
@@ -61,8 +62,17 @@ header div.top div.container div.right nav {
     float: right;
 }
 
-header div.top div.container div.right nav a {
+header div.top div.container div.right nav a,
+header div.top div.container div.right nav span {
     margin-left: 10px;
+}
+
+header div.top div.container div.right nav span.user {
+    background-image: url("../images/ico-user.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    padding-left: 23px;
 }
 
 header div.middle {

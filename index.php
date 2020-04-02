@@ -1,42 +1,16 @@
 <?php
-$acceptedPages = ["hirdetesek", "hirdetesfeladas", "gyik", "regisztracio", "belepes", "kapcsolat", "impresszum"];
-if (isset($_GET["page"])) {
-    if (in_array($_GET["page"], $acceptedPages))
-        $page = $_GET["page"];
-    else
-        $page = "404";
-}
-else
-    $page = "main";
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ingyenes apróhirdetés</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" href="/fa4zpw/css/app.css"/>
-</head>
+namespace app;
 
-<body>
-<?php include_once("views/header.php") ?>
-<main class="placeholder">
-    <div class="wrapper">
-        <div class="container">
-            <section class="main">
-            <?php
-                if (isset($page) && is_file("views/{$page}.php"))
-                    require_once ("views/{$page}.php");
-                else
-                    require_once ("views/404.php");
-            ?>
-            </section>
-            <?php require_once ("views/sidebar.php"); ?>
-        </div>
-    </div>
-</main>
-<?php include_once("views/footer.php") ?>
-<script src="/fa4zpw/js/app.js"></script>
-</body>
-</html>
+ob_start();
+session_start();
+global $data;
+
+require_once("autoload.php");
+
+//$json = new JSON();
+//$json->write("users.json", $a);
+
+Router::init();
+Router::router();
+App::run($data);

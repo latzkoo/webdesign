@@ -74,33 +74,40 @@ main.placeholder div.wrapper div.container {
     }
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Exo", sans-serif;
-    font-size: 30px;
-    line-height: 35px;
     font-weight: 400;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 30px;
+    line-height: 36px;
 }
 @media screen and (min-width: 768px) {
     h1 {
-        font-size: 40px;
-        line-height: 45px;
+        font-size: 36px;
+        line-height: 42px;
     }
 }
-
-article {
-    font-size: 16px;
-    line-height: 24px;
+h2 {
+    font-size: 26px;
+    line-height: 30px;
 }
-
-article p {
-    margin: 25px 0;
+@media screen and (min-width: 768px) {
+    h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
 }
-
-article a {
-    color: #da3539;
+h3 {
+    font-size: 22px;
+    line-height: 26px;
 }
-article a:hover {
-    text-decoration: underline;
+@media screen and (min-width: 768px) {
+    h3 {
+        font-size: 22px;
+        line-height: 26px;
+    }
 }
 
 section.main {
@@ -117,4 +124,9 @@ section.main {
     section.main {
         width: calc(100% - 340px);
     }
+}
+
+div.error {
+    color: #da3539;
+    font-weight: 600;
 }

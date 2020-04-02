@@ -8,7 +8,7 @@
             <li><a class="tr-color" href="/fa4zpw/?page=hirdetesek&category=szabadido">Szabadidő, sport (0)</a></li>
             <li><a class="tr-color" href="/fa4zpw/?page=hirdetesek&category=divat">Divat, ruházat (0)</a></li>
             <li><a class="tr-color" href="/fa4zpw/?page=hirdetesek&category=otthon">Otthon, háztartás (0)</a></li>
-            <li><a class="tr-color" href="/fa4zpw/?page=hirdetesek&category=">Baba-mama (0)</a></li>
+            <li><a class="tr-color" href="/fa4zpw/?page=hirdetesek&category=baba-mama">Baba-mama (0)</a></li>
         </ul></div>
     </div>
 </aside>
