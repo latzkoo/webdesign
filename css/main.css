@@ -126,7 +126,13 @@ section.main {
     }
 }
 
+div.error,
+div.success {
+    font-weight: 400;
+}
 div.error {
     color: #da3539;
-    font-weight: 600;
+}
+div.success {
+    color: #4DC46F;
 }

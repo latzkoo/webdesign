@@ -13,7 +13,7 @@ class Router
         self::$pages[] = new Page("Gyakran ismételt kérdések", "gyik");
         self::$pages[] = new Page("Regisztráció", "regisztracio");
         self::$pages[] = new Page("Belépés", "belepes");
-        self::$pages[] = new Page("Adataim módosítása", "adatmodositas", true);
+        self::$pages[] = new Page("Profilom", "profilom", true);
         self::$pages[] = new Page("Kapcsolat", "kapcsolat");
         self::$pages[] = new Page("Impresszum", "impresszum");
     }
@@ -25,7 +25,7 @@ class Router
                 if (!$page->isProtected())
                     return $_GET["page"];
 
-                if (isset($_SESSION["email"]))
+                if (isset($_SESSION["user"]))
                     return $_GET["page"];
                 else
                     return header("Location: /fa4zpw/?page=belepes&redirect_to={$_GET["page"]}");
@@ -68,6 +68,20 @@ class Router
         else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "belepes") {
             $auth = new Auth();
             $auth->login();
+        }
+        /**
+         * Registration
+         */
+        else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "regisztracio") {
+            $auth = new Auth();
+            $auth->register($_POST);
+        }
+        /**
+         * Profile POST
+         */
+        else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "profilom") {
+            $auth = new Auth();
+            $auth->update($_POST);
         }
 
         $data["page"] = self::getPage();

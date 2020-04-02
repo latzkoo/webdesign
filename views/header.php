@@ -8,9 +8,9 @@
             </div>
             <div class="right">
                 <nav>
-                    <?php if(isset($_SESSION["email"]) && isset($_SESSION["firstname"])): ?>
-                        <span class="user tr-all"><?=$_SESSION["firstname"]?></span>
-                        <a class="tr-all" href="/fa4zpw/?page=adatmodositas">Profilom</a>
+                    <?php if(isset($_SESSION["user"])): ?>
+                        <span class="user tr-all"><?=$_SESSION["user"]->firstname?></span>
+                        <a class="tr-all<?=isset($_GET["page"]) && $_GET["page"] == "profilom" ? " selected" : ""?>" href="/fa4zpw/?page=profilom">Profilom</a>
                         <a class="tr-all" href="/fa4zpw/?logout">Kilépés</a>
                     <?php else: ?>
                         <a class="tr-all<?=isset($_GET["page"]) && $_GET["page"] == "regisztracio" ? " selected" : ""?>" href="/fa4zpw/?page=regisztracio">Regisztráció</a>

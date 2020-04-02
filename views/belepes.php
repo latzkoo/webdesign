@@ -10,14 +10,14 @@
                 <div class="row">
                     <div class="col1">
                         <label for="email">E-mail cím<span>*</span></label>
-                        <input type="email" name="email" id="email" maxlength="100"
+                        <input type="email" name="email" id="email" maxlength="100" required="required"
                             <?=isset($_POST["email"]) && !empty($_POST["email"]) ? ' value="' . $_POST["email"] . '"' : ' autofocus' ?> />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col1">
                         <label for="passwd">Jelszó<span>*</span></label>
-                        <input type="password" name="passwd" id="passwd"
+                        <input type="password" name="passwd" id="passwd" required="required"
                             <?=isset($_POST["passwd"]) && !empty($_POST["passwd"]) ? ' value="' . $_POST["passwd"] . '"' :
                             ((isset($_POST["email"]) && !empty($_POST["email"])) &&
                             (!isset($_POST["passwd"]) || (isset($_POST["passwd"]) && empty($_POST["passwd"]))) ? ' autofocus' : '') ?> />
@@ -29,13 +29,7 @@
                     <button class="tr-all">Belépés</button>
                 </div>
             </div>
-            <?php if (isset($error)): ?>
-                <div class="row">
-                    <div class="col1">
-                        <div class="error"><?= $error["message"] ?></div>
-                    </div>
-                </div>
-            <?php endif ?>
+            <?php include_once("error.php") ?>
         </form>
     </div>
 </section>

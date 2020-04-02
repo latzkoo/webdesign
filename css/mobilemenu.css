@@ -8,6 +8,10 @@ button.mobilemenu {
 	transform: rotate(0deg);
 	cursor: pointer;
 	padding: 0;
+	box-shadow: none;
+}
+button.mobilemenu:hover {
+	background-color: transparent;
 }
 @media (min-width: 768px) {
 	button.mobilemenu {

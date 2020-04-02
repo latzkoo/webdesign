@@ -17,6 +17,9 @@ class JSON extends File
      */
     public function write($filename, $data)
     {
+        if (empty($data))
+            $data = [];
+
         parent::write($filename, json_encode($data));
     }
 

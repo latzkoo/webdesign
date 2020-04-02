@@ -30,7 +30,7 @@ class Helper
         $get = [];
         foreach ($queryStringArr as $item) {
             $el = explode("=", $item);
-            $get[$el[0]] = $el[1];
+            $get[$el[0]] = isset($el[1]) ? $el[1] : null;
         }
 
         return $get;
