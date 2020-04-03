@@ -77,13 +77,25 @@ class Router
             $auth->register($_POST);
         }
         /**
-         * Profile POST
+         * Profile
          */
         else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "profilom") {
             $auth = new Auth();
             $auth->update($_POST);
         }
+        /**
+         * Ad
+         */
+        else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "hirdetesfeladas") {
+            if (!isset($_SESSION["user"]))
+                header("Location: /fa4zpw/?page=belepes&redirect_to={$_GET["page"]}");
 
+            $ads = new Ads();
+            $ads->add($_POST, $_FILES);
+        }
+
+        $ad = new Ads();
+        $data["categories"] = $ad->getCategories(true);
         $data["page"] = self::getPage();
     }
 

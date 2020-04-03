@@ -136,3 +136,6 @@ div.error {
 div.success {
     color: #4DC46F;
 }
+span.strong {
+    font-weight: 500;
+}

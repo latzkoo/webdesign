@@ -1,4 +1,4 @@
-<section class="login">
+<div class="login">
     <h1>Belépés</h1>
     <div class="formblock">
         <form action="/fa4zpw/?page=belepes" method="post">
@@ -32,4 +32,4 @@
             <?php include_once("error.php") ?>
         </form>
     </div>
-</section>
+</div>

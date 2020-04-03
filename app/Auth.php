@@ -164,7 +164,8 @@ class Auth
                 $json->write("users.json", $this->users);
 
                 header("Location: /fa4zpw/?page=regisztracio&success");
-            } else {
+            }
+            else {
                 $data["error"]["message"] = "A megadott e-mail címmel már létezik regisztráció!";
             }
         }

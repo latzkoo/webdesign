@@ -10,7 +10,7 @@ class File
 
     public function __construct()
     {
-        $this->dir = dirname(__DIR__) . "/assets/storage";
+        $this->setDir(dirname(__DIR__) . "/assets/storage");
     }
 
     /**
@@ -55,25 +55,20 @@ class File
      */
     public function read($filename)
     {
-        try {
-            $data = "";
+        $data = "";
 
-            $file = $this->dir . "/" . $filename;
-            $resource = @fopen($file, "r");
+        $file = $this->dir . "/" . $filename;
+        $resource = @fopen($file, "r");
 
-            if (!$resource)
-                throw new Exception("Hiba! Nem lehet megnyitni a fájlt: " . $filename);
+        if (!$resource)
+            $resource = fopen($file, "w");
 
-            if ($size = filesize($file))
-                $data = fread($resource, $size);
+        if ($size = filesize($file))
+            $data = fread($resource, $size);
 
-            fclose($resource);
+        fclose($resource);
 
-            return $data;
-        }
-        catch (Exception $e) {
-            die($e->getMessage());
-        }
+        return $data;
     }
 
 }
