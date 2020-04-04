@@ -1,5 +1,6 @@
 <h1>Impresszum</h1>
 <article>
+    <h3>Apróhirdetés</h3>
     <p><span class="strong">A weboldalt készítette</span>: Timári László<br/>
         <span class="strong">Neptun azonosító</span>: FA4ZPW</p>
     <p><span class="strong">Az oldal célja</span>: A web tervezés (IBL714L) tantárgy projektmunka megvalósítása<br/>

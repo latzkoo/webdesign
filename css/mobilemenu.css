@@ -1,4 +1,4 @@
-button.mobilemenu {
+button#mobilemenu {
 	background-color: transparent;
 	top: 8px;
 	right: 15px;
@@ -10,16 +10,16 @@ button.mobilemenu {
 	padding: 0;
 	box-shadow: none;
 }
-button.mobilemenu:hover {
+button#mobilemenu:hover {
 	background-color: transparent;
 }
 @media (min-width: 768px) {
-	button.mobilemenu {
+	button#mobilemenu {
 		display: none;
 	}
 }
 
-button.mobilemenu span {
+button#mobilemenu span {
 	display: block;
 	position: absolute;
 	height: 3px;
@@ -32,34 +32,34 @@ button.mobilemenu span {
 	transition: 150ms ease-in-out;
 }
 
-button.mobilemenu span:nth-child(1) {
+button#mobilemenu span:nth-child(1) {
 	top: 0px;
 	transform-origin: left center;
 }
 
-button.mobilemenu span:nth-child(2) {
+button#mobilemenu span:nth-child(2) {
 	top: 10px;
 	transform-origin: left center;
 }
 
-button.mobilemenu span:nth-child(3) {
+button#mobilemenu span:nth-child(3) {
 	top:20px;
 	transform-origin: left center;
 }
 
-button.mobilemenu.open span:nth-child(1) {
+button#mobilemenu.open span:nth-child(1) {
 	transform: rotate(45deg);
 	top: 0;
 	left: 0;
 	width: 31px;
 }
 
-button.mobilemenu.open span:nth-child(2) {
+button#mobilemenu.open span:nth-child(2) {
 	width: 0;
 	opacity: 0;
 }
 
-button.mobilemenu.open span:nth-child(3) {
+button#mobilemenu.open span:nth-child(3) {
 	transform: rotate(-45deg);
 	top: 22px;
 	left: 0;

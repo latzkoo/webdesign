@@ -2,6 +2,7 @@
     <h1>Profilom</h1>
     <div class="formblock">
         <form action="/fa4zpw/?page=profilom" method="post">
+            <?php include("views/sessid.php")?>
             <fieldset>
                 <legend>Adataim módosítása</legend>
                 <div class="row">

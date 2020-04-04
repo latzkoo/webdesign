@@ -1,7 +1,5 @@
 <?php
 
-namespace app;
-
 class Router
 {
     public static $pages;
@@ -14,6 +12,7 @@ class Router
         self::$pages[] = new Page("Regisztráció", "regisztracio");
         self::$pages[] = new Page("Belépés", "belepes");
         self::$pages[] = new Page("Profilom", "profilom", true);
+        self::$pages[] = new Page("Hirdetéseim", "hirdeteseim", true);
         self::$pages[] = new Page("Kapcsolat", "kapcsolat");
         self::$pages[] = new Page("Impresszum", "impresszum");
     }
@@ -28,7 +27,7 @@ class Router
                 if (isset($_SESSION["user"]))
                     return $_GET["page"];
                 else
-                    return header("Location: /fa4zpw/?page=belepes&redirect_to={$_GET["page"]}");
+                    header("Location: /fa4zpw/?page=belepes&redirect_to={$_GET["page"]}");
             }
             else
                 return "404";
@@ -51,9 +50,13 @@ class Router
         return false;
     }
 
-    public static function router()
+    public static function route()
     {
         global $data;
+
+        $ads = new Ads();
+        $data["categories"] = $ads->getCategories(true);
+        $data["page"] = self::getPage();
 
         /**
          * Logout
@@ -84,19 +87,55 @@ class Router
             $auth->update($_POST);
         }
         /**
-         * Ad
+         * Ad POST
          */
         else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "hirdetesfeladas") {
             if (!isset($_SESSION["user"]))
                 header("Location: /fa4zpw/?page=belepes&redirect_to={$_GET["page"]}");
 
-            $ads = new Ads();
             $ads->add($_POST, $_FILES);
+            $data["ad"] = $_POST;
+        }
+        /**
+         * Ad GET
+         */
+        else if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET["page"]) && $_GET["page"] == "hirdetesek") {
+            if (isset($_GET["category"]) && !empty($_GET["category"]))
+                $data["category"] = $ads->getCategory($_GET["category"]);
+
+            $data["ads"] = $ads->getAds(null, isset($_GET["category"]) && !empty($_GET["category"]) ? $_GET["category"] : null);
+        }
+        /**
+         * My ads GET
+         */
+        else if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET["page"]) && $_GET["page"] == "hirdeteseim") {
+            if (isset($_GET["delete"]) && !empty($_GET["delete"]))
+                $ads->deleteAd($_GET["delete"]);
+
+            else if (isset($_GET["edit"]) && !empty($_GET["edit"])) {
+                $data["ad"] = (array)$ads->getAd($_GET["edit"]);
+
+                if ($_SESSION["user"]->id != $data["ad"]["user_id"])
+                    $data["notfound"] = true;
+            }
+
+            else
+                $data["ads"] = $ads->getAds(null, null, $_SESSION["user"]->id);
+
+            $data["edit"] = true;
         }
 
-        $ad = new Ads();
-        $data["categories"] = $ad->getCategories(true);
-        $data["page"] = self::getPage();
+        /**
+         * Edit ad POST
+         */
+        else if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_GET["page"]) && $_GET["page"] == "hirdeteseim") {
+            $ads->update($_POST, $_FILES);
+            $data["ad"] = $_POST;
+        }
+
+        else {
+            $data["ads"] = $ads->getAds(5);
+        }
     }
 
 }

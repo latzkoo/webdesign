@@ -68,6 +68,7 @@ main.placeholder div.wrapper div.container {
     overflow: hidden;
     padding: 30px 15px;
 }
+
 @media screen and (min-width: 768px) {
     main.placeholder div.wrapper div.container {
         padding: 60px 0;
@@ -79,30 +80,40 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin-bottom: 15px;
 }
+
 h1 {
     font-size: 30px;
     line-height: 36px;
 }
+
+h1 span.items {
+    font-size: 22px;
+}
+
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 36px;
         line-height: 42px;
     }
 }
+
 h2 {
     font-size: 26px;
     line-height: 30px;
 }
+
 @media screen and (min-width: 768px) {
     h2 {
         font-size: 32px;
         line-height: 36px;
     }
 }
+
 h3 {
     font-size: 22px;
     line-height: 26px;
 }
+
 @media screen and (min-width: 768px) {
     h3 {
         font-size: 22px;
@@ -114,12 +125,14 @@ section.main {
     float: left;
     width: 100%;
 }
+
 @media screen and (min-width: 768px) {
     section.main {
         width: calc(100% - 250px);
         padding: 0 30px 0 0;
     }
 }
+
 @media screen and (min-width: 992px) {
     section.main {
         width: calc(100% - 340px);
@@ -130,12 +143,15 @@ div.error,
 div.success {
     font-weight: 400;
 }
+
 div.error {
     color: #da3539;
 }
+
 div.success {
     color: #4DC46F;
 }
+
 span.strong {
     font-weight: 500;
 }

@@ -2,6 +2,7 @@ window.addEventListener("load", function () {
     let mainMenu = document.getElementById("mainmenu");
     let buttonHamburger = document.getElementById("mobilemenu");
     let buttonBackToTop = document.getElementById("back-to-top");
+    let buttonDelete = document.getElementsByClassName("delete");
 
     window.isMobile = function() {
         let styles = window.getComputedStyle(mobileMenu);
@@ -25,8 +26,6 @@ window.addEventListener("load", function () {
 
     });
 
-
-
     buttonBackToTop.addEventListener("click", function () {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -36,5 +35,12 @@ window.addEventListener("load", function () {
         this.classList.toggle("open");
         mainMenu.classList.toggle("open");
     });
+
+    for (let i = 0; i < buttonDelete.length; i++) {
+        buttonDelete[i].addEventListener("click", function(e) {
+            if (!confirm("Biztos, hogy törli?"))
+                e.preventDefault();
+        });
+    }
 
 });

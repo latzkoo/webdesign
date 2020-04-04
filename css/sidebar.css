@@ -66,6 +66,7 @@ aside .box .categories ul li a {
     color: #da3539;
 }
 
-aside .box .categories ul li a:hover {
+aside .box .categories ul li a:hover,
+aside .box .categories ul li a.selected {
     color: #000;
 }

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <title>Ingyenes apróhirdetés</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" href="/fa4zpw/css/app.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="/fa4zpw/css/app.css" />
+    <link rel="stylesheet" media="print" href="/fa4zpw/css/print.css" />
 </head>
 
 <body>

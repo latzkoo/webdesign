@@ -1,7 +1,5 @@
 <?php
 
-namespace app;
-
 class Auth
 {
     private static $exceptedURLs = ["regisztracio", "belepes"];
@@ -54,8 +52,9 @@ class Auth
                     $url .= "?page=" . $_POST["redirect_to"];
                 }
 
-                return header("Location: {$url}");
-            } else {
+                header("Location: ".Helper::buildURL($url));
+            }
+            else {
                 $data["error"]["message"] = "Hibás e-mail cím vagy jelszó!";
             }
         }
@@ -67,7 +66,7 @@ class Auth
     {
         session_destroy();
 
-        return header("Location: {$_SERVER["HTTP_REFERER"]}");
+        header("Location: ".Helper::removePHPSESSID($_SERVER["HTTP_REFERER"]));
     }
 
     /**
@@ -163,12 +162,20 @@ class Auth
 
                 $json->write("users.json", $this->users);
 
-                header("Location: /fa4zpw/?page=regisztracio&success");
+                header("Location: ".Helper::buildURL("/fa4zpw/?page=regisztracio&success"));
             }
             else {
                 $data["error"]["message"] = "A megadott e-mail címmel már létezik regisztráció!";
             }
         }
+    }
+
+    public function getUsers()
+    {
+        $json = new JSON();
+        $this->users = (array)$json->read("users.json");
+
+        return $this->users;
     }
 
     public function update($post)
@@ -192,7 +199,7 @@ class Auth
                 $this->updateUsers($_SESSION["user"]->id, $post);
                 $json->write("users.json", $this->users);
 
-                header("Location: /fa4zpw/?page=profilom&success");
+                header("Location: ".Helper::buildURL("/fa4zpw/?page=profilom&success"));
             } else {
                 $data["error"]["message"] = "A megadott e-mail címmel már létezik regisztráció!";
             }

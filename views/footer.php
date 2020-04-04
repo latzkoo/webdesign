@@ -2,7 +2,7 @@
     <div class="container">
         <div class="right">
             <nav>
-                <a class="tr-color" href="/fa4zpw/?page=impresszum">Impresszum</a>
+                <a class="tr-color" href="<?=Helper::buildURL("/fa4zpw/?page=impresszum")?>">Impresszum</a>
             </nav>
         </div>
         <div class="left">

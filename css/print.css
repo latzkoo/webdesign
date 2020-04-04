@@ -1,0 +1,50 @@
+@media print {
+    header,
+    footer,
+    aside {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    div.ads {
+        width: 900px;
+        margin: 60px auto 0 auto;
+    }
+
+    div.ads .items .item {
+        background: #fff;
+        box-shadow: none;
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+    }
+
+    div.ads .items .item .image {
+        float: left;
+        width: 300px;
+        height: 300px;
+        min-height: 300px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    div.ads .items .item .image img {
+        width: auto;
+        max-height: 300px;
+
+    }
+
+    div.ads .items .item .details {
+        width: calc(100% - 330px);
+    }
+
+    @page :left {
+        margin: 2cm;
+    }
+
+    @page :right {
+        margin: 2cm;
+    }
+}

@@ -4,7 +4,7 @@
         <form action="/fa4zpw/?page=belepes" method="post">
             <input type="hidden" name="redirect_to"
                    value="<?= isset($_GET["redirect_to"]) && !empty($_GET["redirect_to"]) ? $_GET["redirect_to"] :
-                       (isset($_SERVER["HTTP_REFERER"]) ? \app\Helper::getPageURLFromReferer($_SERVER["HTTP_REFERER"]) : "/fa4zpw/") ?>"/>
+                       (isset($_SERVER["HTTP_REFERER"]) ? \Helper::getPageURLFromReferer($_SERVER["HTTP_REFERER"]) : "/fa4zpw/") ?>"/>
             <fieldset>
                 <legend>Belépési adatok</legend>
                 <div class="row">

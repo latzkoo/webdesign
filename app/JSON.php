@@ -1,8 +1,5 @@
 <?php
 
-
-namespace app;
-
 class JSON extends File
 {
 

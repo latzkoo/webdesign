@@ -1,11 +1,21 @@
 <?php
 
-
-namespace app;
-
-
 class App
 {
+    public static $cookiesEnabled = true;
+
+    public static function boot()
+    {
+        setcookie("check", true);
+
+        if (!isset($_COOKIE["check"])) {
+            ini_set("session.use_cookies", 0);
+            ini_set("session.use_only_cookies",0);
+            ini_set("session.use_trans_sid", true);
+
+            self::$cookiesEnabled = false;
+        }
+    }
 
     /**
      * @param $data
@@ -20,6 +30,14 @@ class App
         ob_end_clean();
 
         echo $app;
+    }
+
+    /**
+     * @return bool
+     */
+    public static function isCookiesEnabled()
+    {
+        return self::$cookiesEnabled;
     }
 
 }
