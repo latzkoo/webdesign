@@ -1,4 +1,4 @@
-<div class="ads">
+<div class="classifieds">
     <div class="items">
         <?php if(isset($ads) && count($ads) > 0):?>
             <?php foreach (array_reverse($ads) as $ad): ?>

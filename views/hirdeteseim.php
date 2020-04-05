@@ -16,5 +16,5 @@
     </div>
 <?php else: ?>
     <h1>Hirdetéseim <span class="items">(<?=isset($ads) ? count($ads) : 0?>)</span></h1>
-    <?php include("views/ads.php")?>
+    <?php include("views/classifieds.php")?>
 <?php endif ?>

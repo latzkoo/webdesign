@@ -1,8 +1,8 @@
-div.ads {
+div.classifieds {
     width: 100%;
 }
 
-div.ads .items .item {
+div.classifieds .items .item {
     background: #FBF9F9;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     float: left;
@@ -11,7 +11,7 @@ div.ads .items .item {
     position: relative;
 }
 
-div.ads .items .item .edit-ad a {
+div.classifieds .items .item .edit-ad a {
     background: url("../images/ico-edit.svg") center center no-repeat;
     background-size: 16px 16px;
     position: absolute;
@@ -23,7 +23,7 @@ div.ads .items .item .edit-ad a {
     display: block;
 }
 
-div.ads .items .item .delete-ad a {
+div.classifieds .items .item .delete-ad a {
     background: url("../images/ico-delete.svg") center center no-repeat;
     background-size: 12px 12px;
     position: absolute;
@@ -35,11 +35,11 @@ div.ads .items .item .delete-ad a {
     display: block;
     transition: transform 150ms ease-in;
 }
-div.ads .items .item .delete-ad a:hover {
+div.classifieds .items .item .delete-ad a:hover {
     transform: rotate(90deg);
 }
 
-div.ads .items .item .image {
+div.classifieds .items .item .image {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,30 +49,30 @@ div.ads .items .item .image {
 }
 
 @media screen and (min-width: 425px) {
-    div.ads .items .item .image {
+    div.classifieds .items .item .image {
         width: 150px;
         min-height: 150px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    div.ads .items .item .image {
+    div.classifieds .items .item .image {
         width: 200px;
         min-height: 200px;
     }
 }
 
-div.ads .items .item .image.default {
+div.classifieds .items .item .image.default {
     background-color: #efefef;
     background-image: url("../images/noimage.svg");
     background-size: 50% auto;
 }
 
-div.ads .items .item .image img {
+div.classifieds .items .item .image img {
     width: 100%;
 }
 
-div.ads .items .item .details {
+div.classifieds .items .item .details {
     float: right;
     width: 100%;
     padding: 15px;
@@ -80,55 +80,55 @@ div.ads .items .item .details {
 }
 
 @media screen and (min-width: 425px) {
-    div.ads .items .item .details {
+    div.classifieds .items .item .details {
         width: calc(100% - 150px);
     }
 }
 
 @media screen and (min-width: 768px) {
-    div.ads .items .item .details {
+    div.classifieds .items .item .details {
         width: calc(100% - 200px);
     }
 }
 
-div.ads .items .item .details .title {
+div.classifieds .items .item .details .title {
     font-family: "Exo", sans-serif;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-div.ads .items .item .details .category {
-    ont-family: "Exo", sans-serif;
+div.classifieds .items .item .details .category {
+    font-family: "Exo", sans-serif;
     font-weight: 600;
 }
 
-div.ads .items .item .details .price {
+div.classifieds .items .item .details .price {
     font-size: 20px;
     font-weight: 400;
     color: #DF3539;
     margin: 10px 0;
 }
 
-div.ads .items .item .details .status,
-div.ads .items .item .details .delivery,
-div.ads .items .item .details .info {
+div.classifieds .items .item .details .status,
+div.classifieds .items .item .details .delivery,
+div.classifieds .items .item .details .info {
     font-weight: 400;
 }
 
-div.ads .items .item .details .info a {
+div.classifieds .items .item .details .info a {
     color: #DF3539;
 }
 
-div.ads .items .item .details .info a:hover {
+div.classifieds .items .item .details .info a:hover {
     text-decoration: underline;
 }
 
-div.ads .items .item .details .description {
+div.classifieds .items .item .details .description {
     margin-top: 5px;
     text-align: justify;
 }
 
-div.ads .items .item .details span.highlighted {
+div.classifieds .items .item .details span.highlighted {
     color: #DF3539;
 }

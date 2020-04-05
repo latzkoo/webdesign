@@ -39,19 +39,14 @@
 .formblock fieldset {
     border: 1px solid rgba(0, 0, 0, 0.2);
     background: #FBF9F9;
-    padding: 10px;
-    padding-block-start: 15px;
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
-    padding-block-end: 15px;
+    padding: 15px;
 }
 
 .formblock fieldset legend {
     font-family: "Exo", sans-serif;
     font-weight: 600;
-    padding-inline-start: 5px;
-    padding-inline-end: 5px;
     font-size: 20px;
+    padding: 0 5px;
 }
 
 .formblock .row input[type="text"],
