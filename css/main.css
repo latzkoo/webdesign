@@ -155,3 +155,8 @@ div.success {
 span.strong {
     font-weight: 500;
 }
+
+span.required {
+    color: #DF3539;
+    margin-left: 3px;
+}

@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:400,600,700&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,500,700&display=swap&subset=latin-ext');
-
 @import "reset.css";
+@import "fonts.css";
 @import "main.css";
 @import "sidebar.css";
 @import "header.css";

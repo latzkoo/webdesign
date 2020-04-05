@@ -6,7 +6,7 @@
         <li><span class="strong">Cím:</span> 1037 Budapest, Bécsi út 314. 1/B. 4/16.</li>
         <li><span class="strong">Telefonszám:</span> <a href="tel:+36704667132">+36 70 466 7132</a></li>
         <li><span class="strong">Web:</span> <a href="https://www.latzkoo.hu" target="_blank">www.latzkoo.hu</a></li>
-        <li><span class="strong">E-mail:</span> <a href="mailto:latzkoo@gmail.com">latzkoo@gmail.com</a></li>
+        <li><span class="strong">E-mail:</span> <a href="mailto:Timari.Laszlo@stud.u-szeged.hu">Timari.Laszlo@stud.u-szeged.hu</a></li>
         <li><span class="strong">LinkedIn:</span> <a href="https://www.linkedin.com/in/latzkoo" target="_blank">https://www.linkedin.com/in/latzkoo</a></li>
         <li><span class="strong">GitHub:</span> <a href="https://github.com/latzkoo" target="_blank">https://github.com/latzkoo</a></li>
     </ul>

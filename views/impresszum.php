@@ -9,5 +9,5 @@
         <span class="strong">GitHub</span>: <a href="https://github.com/latzkoo/webdesign" target="_blank">https://github.com/latzkoo/webdesign</a>
     </p>
 
-    <p>Budapest, 2020. április 3.</p>
+    <p>Budapest, 2020. április 5.</p>
 </article>

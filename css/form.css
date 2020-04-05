@@ -54,12 +54,6 @@
     font-size: 20px;
 }
 
-.formblock .row label span.required,
-.formblock .row div.label span.required {
-    color: #DF3539;
-    margin-left: 3px;
-}
-
 .formblock .row input[type="text"],
 .formblock .row input[type="email"],
 .formblock .row input[type="date"],
@@ -80,9 +74,11 @@
     font-weight: 300;
     width: 100%;
 }
+
 .formblock .row input[type="file"] {
     padding: 10px;
 }
+
 .formblock .row input[type="radio"],
 .formblock .row input[type="checkbox"] {
     border-radius: 5px;
@@ -125,6 +121,7 @@ button {
     margin-left: 4px;
     cursor: pointer;
 }
+
 button:hover {
     background: #2d2d2d;
 }
@@ -132,6 +129,7 @@ button:hover {
 .formblock .row button {
     margin: 30px 0 0 4px;
 }
+
 .formblock .row .checkboxes {
     border: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;

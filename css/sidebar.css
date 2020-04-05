@@ -70,3 +70,7 @@ aside .box .categories ul li a:hover,
 aside .box .categories ul li a.selected {
     color: #000;
 }
+
+aside .box .categories ul li a:hover {
+    transform: translateX(5px);
+}

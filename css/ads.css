@@ -33,6 +33,10 @@ div.ads .items .item .delete-ad a {
     right: 5px;
     cursor: pointer;
     display: block;
+    transition: transform 150ms ease-in;
+}
+div.ads .items .item .delete-ad a:hover {
+    transform: rotate(90deg);
 }
 
 div.ads .items .item .image {

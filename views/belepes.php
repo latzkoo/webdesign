@@ -9,14 +9,14 @@
                 <legend>Belépési adatok</legend>
                 <div class="row">
                     <div class="col1">
-                        <label for="email">E-mail cím<span>*</span></label>
+                        <label for="email">E-mail cím<span class="required">*</span></label>
                         <input type="email" name="email" id="email" maxlength="100" required="required"
                             <?=isset($_POST["email"]) && !empty($_POST["email"]) ? ' value="' . $_POST["email"] . '"' : ' autofocus' ?> />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col1">
-                        <label for="passwd">Jelszó<span>*</span></label>
+                        <label for="passwd">Jelszó<span class="required">*</span></label>
                         <input type="password" name="passwd" id="passwd" required="required"
                             <?=isset($_POST["passwd"]) && !empty($_POST["passwd"]) ? ' value="' . $_POST["passwd"] . '"' :
                             ((isset($_POST["email"]) && !empty($_POST["email"])) &&

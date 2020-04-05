@@ -31,3 +31,7 @@ article > div.map {
     width: 100%;
     height: 450px;
 }
+article > div.map > iframe {
+    width: 100%;
+    height: 400px;
+}
