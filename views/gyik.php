@@ -31,7 +31,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="2">Nem talált választ kérdéseire? Írjon nekünk: <a class="tr-color" href="mailto:latzkoo@gmail.com">latzkoo@gmail.com</a></td>
+            <td colspan="2">Nem talált választ kérdéseire? Írjon nekünk: <a class="tr-color" href="mailto:Timari.Laszlo@stud.u-szeged.hu">Timari.Laszlo@stud.u-szeged.hu</a></td>
         </tr>
     </tfoot>
 </table>
